@@ -1,4 +1,4 @@
-package p.cm;
+package p.cm.thread;
 
 import java.util.Arrays;
 import java.util.List;

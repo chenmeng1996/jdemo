@@ -1,4 +1,4 @@
-package p.cm;
+package p.cm.thread;
 
 public class WaitNotify {
 
