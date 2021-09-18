@@ -1,10 +1,10 @@
-package thread;
+package jdemo.thread;
 
 import java.util.concurrent.locks.LockSupport;
 
 public class LockSupportDemo {
     public static void main(String[] args) {
-        Thread threadA = new Thread(new Runnable() {
+        var threadA = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -18,7 +18,7 @@ public class LockSupportDemo {
             }
         });
 
-        Thread threadB = new Thread(new Runnable() {
+        var threadB = new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("B：通知所有人继续执行");

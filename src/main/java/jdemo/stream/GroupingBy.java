@@ -1,4 +1,4 @@
-package stream;
+package jdemo.stream;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 public class GroupingBy {
 
     public static void main(String[] args) {
-        List<People> peoples = new ArrayList<>();
+        var peoples = new ArrayList<People>();
         peoples.add(new People("a", 1));
         peoples.add(new People("b", 1));
         peoples.add(new People("c", 2));
-        Map<Integer, List<People>> peopleMap = peoples.stream().collect(Collectors.groupingBy(People::getAge));
+        var peopleMap = peoples.stream().collect(Collectors.groupingBy(People::getAge));
         System.out.println(peopleMap);
     }
 

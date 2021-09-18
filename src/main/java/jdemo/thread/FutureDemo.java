@@ -1,17 +1,14 @@
-package thread;
+package jdemo.thread;
 
 import java.util.concurrent.*;
 
 /**
- * @author 陈濛
- * @date 2020/10/5 4:04 下午
- *
  * 线程池 submit 异步任务
  */
 public class FutureDemo {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        Future<String> future = executorService.submit(new Callable<String>() {
+        var executorService = Executors.newCachedThreadPool();
+        var future = executorService.submit(new Callable<String>() {
             @Override
             public String call() throws Exception {
                 System.out.println("异步任务开始");
@@ -30,7 +27,7 @@ public class FutureDemo {
 
         System.out.println("主线程需要使用异步结果，等待异步任务完成");
         try {
-            String res = future.get();
+            var res = future.get();
             System.out.println("异步结果为:" + res);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package thread;
+package jdemo.thread;
 
 import java.util.concurrent.*;
 
@@ -11,7 +11,7 @@ import java.util.concurrent.*;
 public class FutureTaskDemo {
 
     public static void main(String[] args) {
-        FutureTask<String> futureTask = new FutureTask<>(new Callable<String>() {
+        var futureTask = new FutureTask<>(new Callable<String>() {
             @Override
             public String call() throws Exception {
                 Thread.sleep(2000);
@@ -19,11 +19,11 @@ public class FutureTaskDemo {
             }
         });
 
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        var executorService = Executors.newCachedThreadPool();
         executorService.execute(futureTask);
 
         try {
-            String res = futureTask.get();
+            var res = futureTask.get();
             System.out.println(res);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

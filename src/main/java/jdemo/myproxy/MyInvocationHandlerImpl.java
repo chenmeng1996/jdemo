@@ -1,4 +1,4 @@
-package myproxy;
+package jdemo.myproxy;
 
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;

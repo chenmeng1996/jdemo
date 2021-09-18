@@ -1,4 +1,4 @@
-package stream;
+package jdemo.stream;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,8 +14,8 @@ import java.util.stream.Collector;
 public class StringCollector implements Collector<String, StringCollector.StringCombiner, String> {
 
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("a", "b", "c");
-        String s = list.stream().collect(new StringCollector(",", "[", "]"));
+        var list = Arrays.asList("a", "b", "c");
+        var s = list.stream().collect(new StringCollector(",", "[", "]"));
         System.out.println(s);
     }
 

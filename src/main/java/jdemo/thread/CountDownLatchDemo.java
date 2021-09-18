@@ -1,16 +1,16 @@
-package thread;
+package jdemo.thread;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 public class CountDownLatchDemo {
     public static void main(String[] args) {
-        CountDownLatch countDownLatch1 = new CountDownLatch(1);
-        CountDownLatch countDownLatch2 = new CountDownLatch(4);
+        var countDownLatch1 = new CountDownLatch(1);
+        var countDownLatch2 = new CountDownLatch(4);
 
 
-        for (int i = 0; i < 10; i++) {
-            int finalI = i;
+        for (var i = 0; i < 10; i++) {
+            var finalI = i;
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {

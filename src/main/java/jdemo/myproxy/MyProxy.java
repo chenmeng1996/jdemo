@@ -1,4 +1,4 @@
-package myproxy;
+package jdemo.myproxy;
 
 import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
@@ -55,7 +55,7 @@ public class MyProxy {
     private static String genSesource(Class<?> interfaces){
         StringBuilder src = new StringBuilder();
         String ln = "\n";
-        src.append("package p.cm.myproxy;").append(ln)
+        src.append("package p.cm.jdemo.myproxy;").append(ln)
                 .append("import java.lang.reflect.Method;").append(ln)
                 .append("public class $Proxy0 implements ").append(interfaces.getName()).append("{").append(ln)
                 .append("private MyInvocationHandler h;").append(ln)

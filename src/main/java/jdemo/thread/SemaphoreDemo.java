@@ -1,4 +1,4 @@
-package thread;
+package jdemo.thread;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(2);
+        var semaphore = new Semaphore(2);
 
-        List<Thread> threads = new ArrayList<>();
+        var threads = new ArrayList<Thread>();
 
         for (int i = 0; i < 4; i++) {
             int finalI = i;

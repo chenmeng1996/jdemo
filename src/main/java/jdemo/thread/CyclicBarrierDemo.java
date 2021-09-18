@@ -1,4 +1,4 @@
-package thread;
+package jdemo.thread;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -7,7 +7,7 @@ public class CyclicBarrierDemo {
 
     public static void main(String[] args) {
 
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(3, new Runnable() {
+        var cyclicBarrier = new CyclicBarrier(3, new Runnable() {
             @Override
             public void run() {
                 System.out.println("开始跑！");
@@ -16,7 +16,7 @@ public class CyclicBarrierDemo {
 
         for (int i = 0; i < 9; i++) {
             int finalI = i;
-            Thread thread = new Thread(new Runnable() {
+            var thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     System.out.println(finalI + "准备就绪");

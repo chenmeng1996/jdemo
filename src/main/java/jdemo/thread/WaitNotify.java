@@ -1,12 +1,12 @@
-package thread;
+package jdemo.thread;
 
 public class WaitNotify {
 
     public static void main(String[] args) throws InterruptedException {
 
-        final Object lock = new Object();
+        final var lock = new Object();
 
-        Thread threadA = new Thread(new Runnable() {
+        var threadA = new Thread(new Runnable() {
             public void run() {
                 synchronized (lock) {
                     try {
@@ -22,7 +22,7 @@ public class WaitNotify {
         threadA.start();
 
 
-        Thread threadB = new Thread(new Runnable() {
+        var threadB = new Thread(new Runnable() {
             public void run() {
                 synchronized (lock) {
                     try {

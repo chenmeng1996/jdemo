@@ -1,4 +1,4 @@
-package p.cm;
+package jdemo.reference;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;

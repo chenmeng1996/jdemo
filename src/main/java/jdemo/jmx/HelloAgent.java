@@ -1,4 +1,4 @@
-package jmx;
+package jdemo.jmx;
 
 //import com.sun.jdmk.comm.HtmlAdaptorServer;
 
@@ -39,7 +39,7 @@ public class HelloAgent {
         int rmiPort = 1099;
         Registry registry = LocateRegistry.createRegistry(rmiPort);
         
-        JMXServiceURL url = new JMXServiceURL("service:jmx:rmi:///jndi/rmi://localhost:"+rmiPort+"/"+domainName);
+        JMXServiceURL url = new JMXServiceURL("service:jdemo.jmx:rmi:///jndi/rmi://localhost:"+rmiPort+"/"+domainName);
         JMXConnectorServer jmxConnector = JMXConnectorServerFactory.newJMXConnectorServer(url, null, mbs);
         jmxConnector.start();
     }

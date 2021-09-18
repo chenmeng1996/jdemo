@@ -1,15 +1,14 @@
-package thread;
+package jdemo.thread;
 
-import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantLockDemo {
     public static void main(String[] args) {
 
-        ReentrantLock lock = new ReentrantLock();
-        Condition condition1 = lock.newCondition();
+        var lock = new ReentrantLock();
+        var condition1 = lock.newCondition();
 
-        Thread threadA = new Thread(new Runnable() {
+        var threadA = new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("A：暂停执行");
@@ -25,7 +24,7 @@ public class ReentrantLockDemo {
             }
         });
 
-        Thread threadB = new Thread(new Runnable() {
+        var threadB = new Thread(new Runnable() {
             @Override
             public void run() {
                 lock.lock();

@@ -1,4 +1,4 @@
-package jmx;
+package jdemo.jmx;
 
 // 资源对象，类名必须是Hello
 public class Hello implements HelloMBean {

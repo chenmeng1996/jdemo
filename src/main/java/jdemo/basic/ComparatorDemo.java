@@ -1,16 +1,17 @@
-package p.cm;
+package jdemo.basic;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.ToIntFunction;
 
-/**
- * @author 陈濛
- * @date 2020/11/7 10:41 下午
- */
 public class ComparatorDemo {
     public static void main(String[] args) {
-        List<People> peoples = new ArrayList<>();
+        var peoples = new ArrayList<People>();
+        peoples.add(new People());
+
         /* 年龄比较 */
-        Comparator<People> comparator1 = Comparator.comparing(People::getAge);
+        var comparator1 = Comparator.comparing(People::getAge);
         peoples.sort(comparator1);
         /* 分数比较 */
         Comparator<List<Integer>> scoreComparator = Comparator.comparingInt(x -> x.stream().mapToInt(Integer::intValue).sum());

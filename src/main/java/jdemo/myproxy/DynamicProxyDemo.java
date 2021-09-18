@@ -1,4 +1,4 @@
-package p.cm;
+package jdemo.myproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

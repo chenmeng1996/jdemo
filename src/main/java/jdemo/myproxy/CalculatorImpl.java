@@ -1,4 +1,4 @@
-package myproxy;
+package jdemo.myproxy;
 
 public class CalculatorImpl implements Calculator {
     @Override

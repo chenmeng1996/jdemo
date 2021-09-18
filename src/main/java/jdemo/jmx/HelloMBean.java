@@ -1,4 +1,4 @@
-package jmx;
+package jdemo.jmx;
 
 public interface HelloMBean {
     String getName();

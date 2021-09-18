@@ -1,4 +1,4 @@
-package p.cm;
+package jdemo.io;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -10,10 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Scanner;
 
-/**
- * @author 陈濛
- * @date 2020/10/7 3:42 下午
- */
+
 public class NIOClient {
     private ByteBuffer byteBuffer = ByteBuffer.allocate(1024); //缓冲区
     private Selector selector = null; //选择器

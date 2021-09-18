@@ -1,4 +1,4 @@
-package thread;
+package jdemo.thread;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,9 +8,9 @@ public class CompletableFutureDemo {
     public static void main(String[] args) {
 
         System.out.println("有个很耗时的任务，让别人帮我做一下吧");
-        List<Integer> a = Arrays.asList(1, 2, 3);
+        var a = Arrays.asList(1, 2, 3);
 
-        CompletableFuture<Integer> future = new CompletableFuture<>();
+        var future = new CompletableFuture<Integer>();
 
         new Thread(() -> {
             try {
@@ -18,7 +18,7 @@ public class CompletableFutureDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            int sum = a.stream().mapToInt(Integer::intValue).sum();
+            var sum = a.stream().mapToInt(Integer::intValue).sum();
             future.complete(sum);
         });
 
